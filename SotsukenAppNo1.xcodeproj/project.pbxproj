@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFCE944C2812A82800054546 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE944B2812A82800054546 /* RoomListView.swift */; };
+		EFCE944E2812CF3B00054546 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE944D2812CF3B00054546 /* SignupViewModel.swift */; };
 		EFD5172A281266B900816674 /* InitialSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD51729281266B900816674 /* InitialSettingView.swift */; };
 		EFD5172D281268B300816674 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD5172C281268B300816674 /* Login.swift */; };
 		EFD5172F28126A0F00816674 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD5172E28126A0F00816674 /* LoginViewModel.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EFCE944B2812A82800054546 /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
+		EFCE944D2812CF3B00054546 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		EFD51729281266B900816674 /* InitialSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingView.swift; sourceTree = "<group>"; };
 		EFD5172C281268B300816674 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		EFD5172E28126A0F00816674 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -81,6 +85,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EFD517302812787600816674 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		EFFE1EE7281256B900BB3FDA = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +115,7 @@
 		EFFE1EF2281256B900BB3FDA /* SotsukenAppNo1 */ = {
 			isa = PBXGroup;
 			children = (
+				EFD517302812787600816674 /* Protocol */,
 				EFFE1F1F2812571A00BB3FDA /* View */,
 				EFFE1F1E2812571200BB3FDA /* ViewModel */,
 				EFFE1F1D2812570200BB3FDA /* Model */,
@@ -152,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				EFD5172E28126A0F00816674 /* LoginViewModel.swift */,
+				EFCE944D2812CF3B00054546 /* SignupViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -162,6 +175,7 @@
 				EFFE1F202812572D00BB3FDA /* LoginView.swift */,
 				EFFE1F2228125E6200BB3FDA /* SignupView.swift */,
 				EFD51729281266B900816674 /* InitialSettingView.swift */,
+				EFCE944B2812A82800054546 /* RoomListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,7 +331,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCE944E2812CF3B00054546 /* SignupViewModel.swift in Sources */,
 				EFD5172A281266B900816674 /* InitialSettingView.swift in Sources */,
+				EFCE944C2812A82800054546 /* RoomListView.swift in Sources */,
 				EFFE1F2328125E6200BB3FDA /* SignupView.swift in Sources */,
 				EFFE1F212812572D00BB3FDA /* LoginView.swift in Sources */,
 				EFD5172D281268B300816674 /* Login.swift in Sources */,

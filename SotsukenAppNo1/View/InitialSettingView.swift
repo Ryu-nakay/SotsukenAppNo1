@@ -22,7 +22,7 @@ struct InitialSettingView: View {
                     Spacer()
                     Spacer()
                     Spacer()
-                }
+                }.padding(.vertical, 40)
 
                 Image("SharkFin")
                     .resizable()
@@ -30,7 +30,7 @@ struct InitialSettingView: View {
                     .frame(width: width/3)
                     .padding(.bottom, 60)
 
-                TextField("UserName", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                TextField(" UserName", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                     .frame(width: width*0.9)
                     .cornerRadius(24)
                     .overlay(
@@ -39,7 +39,7 @@ struct InitialSettingView: View {
                     )
                     .padding(.bottom, 20)
 
-                TextField("User Identifier", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                TextField(" User Identifier", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                     .frame(width: width*0.9)
                     .cornerRadius(24)
                     .overlay(
@@ -50,7 +50,7 @@ struct InitialSettingView: View {
 
                 Button(action: {
 
-                }) {
+                }, label: {
                     Text("Save")
                         .fontWeight(.semibold)
                         .frame(width: width*0.8, height: width*0.8*0.14)
@@ -62,7 +62,9 @@ struct InitialSettingView: View {
                                 .stroke(.black, lineWidth: 1.0)
                         )
                         .shadow(color: .black.opacity(0.1), radius: 5, x: 10, y: 10)
-                }
+                })
+
+                Spacer()
             }
         }
     }

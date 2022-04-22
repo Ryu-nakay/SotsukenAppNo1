@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var login: Login
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if self.login.isLogin == true {
+            RoomListView()
+        } else {
+            if self.login.loginSignupFlag == false {
+                LoginView().environmentObject(login)
+            } else {
+                SignupView().environmentObject(login)
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(Login())
+        ContentView().environmentObject(Login(isLogin: true))
     }
 }
