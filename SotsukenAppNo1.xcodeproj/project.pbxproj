@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFD5172A281266B900816674 /* InitialSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD51729281266B900816674 /* InitialSettingView.swift */; };
+		EFD5172D281268B300816674 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD5172C281268B300816674 /* Login.swift */; };
+		EFD5172F28126A0F00816674 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD5172E28126A0F00816674 /* LoginViewModel.swift */; };
 		EFFE1EF4281256B900BB3FDA /* SotsukenAppNo1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFE1EF3281256B900BB3FDA /* SotsukenAppNo1App.swift */; };
 		EFFE1EF6281256B900BB3FDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFE1EF5281256B900BB3FDA /* ContentView.swift */; };
 		EFFE1EF8281256BA00BB3FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFE1EF7281256BA00BB3FDA /* Assets.xcassets */; };
@@ -15,6 +18,7 @@
 		EFFE1F0F281256BA00BB3FDA /* SotsukenAppNo1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFE1F0E281256BA00BB3FDA /* SotsukenAppNo1UITests.swift */; };
 		EFFE1F11281256BA00BB3FDA /* SotsukenAppNo1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFE1F10281256BA00BB3FDA /* SotsukenAppNo1UITestsLaunchTests.swift */; };
 		EFFE1F212812572D00BB3FDA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFE1F202812572D00BB3FDA /* LoginView.swift */; };
+		EFFE1F2328125E6200BB3FDA /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFE1F2228125E6200BB3FDA /* SignupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EFD51729281266B900816674 /* InitialSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingView.swift; sourceTree = "<group>"; };
+		EFD5172C281268B300816674 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		EFD5172E28126A0F00816674 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EFFE1EF0281256B900BB3FDA /* SotsukenAppNo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SotsukenAppNo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFE1EF3281256B900BB3FDA /* SotsukenAppNo1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SotsukenAppNo1App.swift; sourceTree = "<group>"; };
 		EFFE1EF5281256B900BB3FDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +53,7 @@
 		EFFE1F0E281256BA00BB3FDA /* SotsukenAppNo1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SotsukenAppNo1UITests.swift; sourceTree = "<group>"; };
 		EFFE1F10281256BA00BB3FDA /* SotsukenAppNo1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SotsukenAppNo1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EFFE1F202812572D00BB3FDA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EFFE1F2228125E6200BB3FDA /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,7 @@
 		EFFE1F1D2812570200BB3FDA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EFD5172C281268B300816674 /* Login.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -142,6 +151,7 @@
 		EFFE1F1E2812571200BB3FDA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EFD5172E28126A0F00816674 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -150,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				EFFE1F202812572D00BB3FDA /* LoginView.swift */,
+				EFFE1F2228125E6200BB3FDA /* SignupView.swift */,
+				EFD51729281266B900816674 /* InitialSettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +176,7 @@
 				EFFE1EEC281256B900BB3FDA /* Sources */,
 				EFFE1EED281256B900BB3FDA /* Frameworks */,
 				EFFE1EEE281256B900BB3FDA /* Resources */,
+				EFD5172B281267CC00816674 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -279,14 +292,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EFD5172B281267CC00816674 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EFFE1EEC281256B900BB3FDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD5172A281266B900816674 /* InitialSettingView.swift in Sources */,
+				EFFE1F2328125E6200BB3FDA /* SignupView.swift in Sources */,
 				EFFE1F212812572D00BB3FDA /* LoginView.swift in Sources */,
+				EFD5172D281268B300816674 /* Login.swift in Sources */,
 				EFFE1EF6281256B900BB3FDA /* ContentView.swift in Sources */,
 				EFFE1EF4281256B900BB3FDA /* SotsukenAppNo1App.swift in Sources */,
+				EFD5172F28126A0F00816674 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
