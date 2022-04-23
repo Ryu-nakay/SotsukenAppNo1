@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @ObservedObject var loginViewModel = LoginViewModel()
+    @ObservedObject var viewModel = LoginViewModel()
     @EnvironmentObject var login: Login
 
     var body: some View {
@@ -48,7 +48,7 @@ struct LoginView: View {
             // 入力欄
             VStack(spacing: 0) {
                 // テキストフィールド　＜Email＞
-                TextField(" ✉️Email", text: $loginViewModel.email)
+                TextField(" ✉️Email", text: $viewModel.email)
                     .frame(width: width*0.8, height: 24)
                     .cornerRadius(24)
                     .overlay(
@@ -61,7 +61,7 @@ struct LoginView: View {
                     .frame(height: 20)
 
                 // テキストフィールド ＜Password＞
-                SecureField(" 🔒Password", text: $loginViewModel.password)
+                SecureField(" 🔒Password", text: $viewModel.password)
                     .frame(width: width*0.8, height: 24)
                     .cornerRadius(24)
                     .overlay(
@@ -83,7 +83,7 @@ struct LoginView: View {
             VStack(spacing: 0) {
                 // ボタン ＜Log in＞
                 Button(action: {
-                    loginViewModel.onTapLoginButton()
+                    viewModel.onTapLoginButton()
                 }, label: {
                     Text("Log in")
                         .fontWeight(.semibold)
@@ -103,7 +103,7 @@ struct LoginView: View {
 
                 // ボタン ＜Sign up＞
                 Button(action: {
-                    loginViewModel.onTapSignupText()
+                    viewModel.onTapSignupText()
                 }, label: {
                     Text("Sign up")
                         .font(.system(size: 17))
@@ -115,7 +115,7 @@ struct LoginView: View {
 
         }.onAppear {
             // ViewModelにLoginを渡す
-            loginViewModel.getModels(login: login)
+            viewModel.getModels(login: login)
         }
 
     }

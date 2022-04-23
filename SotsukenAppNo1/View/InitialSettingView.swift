@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InitialSettingView: View {
-    @ObservedObject var initialSettingViewModel = InitialSettingViewModel()
+    @ObservedObject var viewModel = InitialSettingViewModel()
 
     var body: some View {
         let width = UIScreen.main.bounds.width
@@ -47,7 +47,7 @@ struct InitialSettingView: View {
             // 入力欄
             VStack(spacing: 0) {
                 // テキストフィールド　＜User Name＞
-                TextField(" User Name", text: $initialSettingViewModel.userName)
+                TextField(" User Name", text: $viewModel.userName)
                     .frame(width: width*0.8, height: 24)
                     .cornerRadius(24)
                     .overlay(
@@ -60,7 +60,7 @@ struct InitialSettingView: View {
                     .frame(height: 20)
 
                 // テキストフィールド ＜User Identifier＞
-                SecureField(" User Identifier", text: $initialSettingViewModel.userIdentifier)
+                SecureField(" User Identifier", text: $viewModel.userIdentifier)
                     .frame(width: width*0.8, height: 24)
                     .cornerRadius(24)
                     .overlay(

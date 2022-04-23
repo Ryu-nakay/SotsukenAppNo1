@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignupView: View {
-    @ObservedObject var signupViewModel = SignupViewModel()
+    @ObservedObject var viewModel = SignupViewModel()
     @EnvironmentObject var login: Login
 
     var body: some View {
@@ -48,7 +48,7 @@ struct SignupView: View {
             // 入力欄
             VStack(spacing: 0) {
                 // テキストフィールド　＜Email＞
-                TextField(" ✉️Email", text: $signupViewModel.email)
+                TextField(" ✉️Email", text: $viewModel.email)
                     .frame(width: width*0.8, height: 24)
                     .cornerRadius(24)
                     .overlay(
@@ -61,7 +61,7 @@ struct SignupView: View {
                     .frame(height: 20)
 
                 // テキストフィールド ＜Password＞
-                SecureField(" 🔒Password", text: $signupViewModel.password)
+                SecureField(" 🔒Password", text: $viewModel.password)
                     .frame(width: width*0.8, height: 24)
                     .cornerRadius(24)
                     .overlay(
@@ -74,7 +74,7 @@ struct SignupView: View {
                     .frame(height: 20)
 
                 // テキストフィールド ＜Password＞
-                SecureField(" 🔒Confilm Password", text: $signupViewModel.confilmPassword)
+                SecureField(" 🔒Confirm Password", text: $viewModel.confirmPassword)
                     .frame(width: width*0.8, height: 24)
                     .cornerRadius(24)
                     .overlay(
@@ -88,7 +88,7 @@ struct SignupView: View {
             VStack(spacing: 0) {
                 // ボタン ＜Sign Up＞
                 Button(action: {
-                    signupViewModel.onTapSignupButton()
+                    viewModel.onTapSignupButton()
                 }, label: {
                     Text("Sign Up")
                         .fontWeight(.semibold)
@@ -108,7 +108,7 @@ struct SignupView: View {
 
                 // ボタン ＜Log in＞
                 Button(action: {
-                    signupViewModel.onTapLoginText()
+                    viewModel.onTapLoginText()
                 }, label: {
                     Text("Log in")
                         .font(.system(size: 17))
@@ -120,7 +120,7 @@ struct SignupView: View {
 
         }.onAppear {
             // ViewModelにLoginを渡す
-            signupViewModel.getModels(login: login)
+            viewModel.getModels(login: login)
         }
     }
 }

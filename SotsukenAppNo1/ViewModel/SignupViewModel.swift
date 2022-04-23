@@ -19,7 +19,7 @@ class SignupViewModel: ObservableObject {
     // Signup画面の入力値
     @Published var email: String = ""
     @Published var password: String = ""
-    @Published var confilmPassword: String = ""
+    @Published var confirmPassword: String = ""
 
     // Loginテキストボタンの挙動
     func onTapLoginText() {
