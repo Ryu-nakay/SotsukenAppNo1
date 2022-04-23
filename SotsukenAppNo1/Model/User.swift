@@ -7,6 +7,7 @@
 
 import Foundation
 
+// ユーザの基本情報を保持するモデル
 class User: ObservableObject {
     // 初期設定が必要かどうか
     @Published var hasInfo: Bool = false

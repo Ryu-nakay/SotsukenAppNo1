@@ -48,39 +48,50 @@ struct SignupView: View {
             // 入力欄
             VStack(spacing: 0) {
                 // テキストフィールド　＜Email＞
-                TextField(" ✉️Email", text: $viewModel.email)
-                    .frame(width: width*0.8, height: 24)
-                    .cornerRadius(24)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .stroke(.black, lineWidth: 1.0)
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("Email")
+
+                    TextField("", text: $viewModel.email)
+                        .frame(width: width*0.8, height: 24)
+                        .cornerRadius(24)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 24)
+                                .stroke(.black, lineWidth: 1.0)
                     )
+                }
 
                 // Emailフィールド - Passwordフィールド
                 Spacer()
                     .frame(height: 20)
 
                 // テキストフィールド ＜Password＞
-                SecureField(" 🔒Password", text: $viewModel.password)
-                    .frame(width: width*0.8, height: 24)
-                    .cornerRadius(24)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .stroke(.black, lineWidth: 1.0)
-                    )
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("Password")
 
-                // Passwordフィールド - Confilm Passwordフィールド
+                    SecureField("", text: $viewModel.password)
+                        .frame(width: width*0.8, height: 24)
+                        .cornerRadius(24)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 24)
+                                .stroke(.black, lineWidth: 1.0)
+                    )
+                }
+
+                // Passwordフィールド - Confirm Passwordフィールド
                 Spacer()
                     .frame(height: 20)
 
                 // テキストフィールド ＜Password＞
-                SecureField(" 🔒Confirm Password", text: $viewModel.confirmPassword)
-                    .frame(width: width*0.8, height: 24)
-                    .cornerRadius(24)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .stroke(.black, lineWidth: 1.0)
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("Confirm Password")
+                    SecureField("", text: $viewModel.confirmPassword)
+                        .frame(width: width*0.8, height: 24)
+                        .cornerRadius(24)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 24)
+                                .stroke(.black, lineWidth: 1.0)
                     )
+                }
             }
 
             Spacer()

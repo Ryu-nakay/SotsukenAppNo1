@@ -40,35 +40,42 @@ struct InitialSettingView: View {
                 .frame(height: UIScreen.main.bounds.height*0.2)
             }
 
-            // サメのひれの下 - UserNameフィールド
+            // サメのひれの下 - UserNameフィールド のスペース
             Spacer()
                 .frame(height: 80)
 
             // 入力欄
             VStack(spacing: 0) {
                 // テキストフィールド　＜User Name＞
-                TextField(" User Name", text: $viewModel.userName)
-                    .frame(width: width*0.8, height: 24)
-                    .cornerRadius(24)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .stroke(.black, lineWidth: 1.0)
-                    )
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("User Name")
 
-                // UserNameフィールド - User Identifierフィールド
+                    TextField("", text: $viewModel.userName)
+                        .frame(width: width*0.8, height: 24)
+                        .cornerRadius(24)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 24)
+                                .stroke(.black, lineWidth: 1.0)
+                    )
+                }
+
+                // UserNameフィールド - User Identifierフィールド のスペース
                 Spacer()
                     .frame(height: 20)
 
                 // テキストフィールド ＜User Identifier＞
-                SecureField(" User Identifier", text: $viewModel.userIdentifier)
-                    .frame(width: width*0.8, height: 24)
-                    .cornerRadius(24)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .stroke(.black, lineWidth: 1.0)
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("User Identifier")
+                    SecureField("", text: $viewModel.userIdentifier)
+                        .frame(width: width*0.8, height: 24)
+                        .cornerRadius(24)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 24)
+                                .stroke(.black, lineWidth: 1.0)
                     )
+                }
 
-                // User Identifierフィールド下
+                // User Identifierフィールド下 のスペース
                 Spacer()
                     .frame(height: 20)
 

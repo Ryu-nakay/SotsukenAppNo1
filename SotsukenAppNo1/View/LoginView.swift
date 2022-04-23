@@ -47,27 +47,36 @@ struct LoginView: View {
 
             // 入力欄
             VStack(spacing: 0) {
-                // テキストフィールド　＜Email＞
-                TextField(" ✉️Email", text: $viewModel.email)
-                    .frame(width: width*0.8, height: 24)
-                    .cornerRadius(24)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .stroke(.black, lineWidth: 1.0)
-                    )
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("Email")
+
+                    // テキストフィールド　＜Email＞
+                    TextField("", text: $viewModel.email)
+
+                        .frame(width: width*0.8, height: 24)
+                        .cornerRadius(24)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 24)
+                                .stroke(.black, lineWidth: 1.0)
+                        )
+                }
 
                 // Emailフィールド - Passwordフィールド
                 Spacer()
                     .frame(height: 20)
 
                 // テキストフィールド ＜Password＞
-                SecureField(" 🔒Password", text: $viewModel.password)
-                    .frame(width: width*0.8, height: 24)
-                    .cornerRadius(24)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .stroke(.black, lineWidth: 1.0)
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("Password")
+
+                    SecureField("", text: $viewModel.password)
+                        .frame(width: width*0.8, height: 24)
+                        .cornerRadius(24)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 24)
+                                .stroke(.black, lineWidth: 1.0)
                     )
+                }
 
                 // Passwordフィールド下
                 Spacer()
@@ -113,7 +122,8 @@ struct LoginView: View {
                     .frame(height: 40)
             }
 
-        }.onAppear {
+        }
+        .onAppear {
             // ViewModelにLoginを渡す
             viewModel.getModels(login: login)
         }
@@ -123,6 +133,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView().environmentObject(Login())
+        LoginView().preferredColorScheme(.light).previewDevice("iPhone 8").environmentObject(Login())
     }
 }
