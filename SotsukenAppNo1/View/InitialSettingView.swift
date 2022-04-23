@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct InitialSettingView: View {
+    @EnvironmentObject var user: User
     @ObservedObject var viewModel = InitialSettingViewModel()
 
     var body: some View {
@@ -90,7 +91,7 @@ struct InitialSettingView: View {
             VStack(spacing: 0) {
                 // ボタン ＜Save＞
                 Button(action: {
-
+                    viewModel.onTapSave()
                 }, label: {
                     Text("Save")
                         .fontWeight(.semibold)
@@ -118,6 +119,7 @@ struct InitialSettingView: View {
 
         }.onAppear {
             // ViewModelにLoginを渡す
+            viewModel.getModels(user: user)
         }
     }
 }
@@ -125,5 +127,6 @@ struct InitialSettingView: View {
 struct InitialSettingView_Previews: PreviewProvider {
     static var previews: some View {
         InitialSettingView()
+            .environmentObject(User())
     }
 }
