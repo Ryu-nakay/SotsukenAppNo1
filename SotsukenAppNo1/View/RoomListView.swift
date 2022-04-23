@@ -9,7 +9,13 @@ import SwiftUI
 
 struct RoomListView: View {
     var body: some View {
-        Text("RoomList")
+        VStack(spacing: 0) {
+            Text("RoomList")
+
+            ForEach(1..<6) { _ in
+                RoomCell(roonName: "Room Name")
+            }
+        }
     }
 }
 

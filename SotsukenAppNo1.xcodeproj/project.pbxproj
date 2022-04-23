@@ -14,6 +14,7 @@
 		EFD5172A281266B900816674 /* InitialSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD51729281266B900816674 /* InitialSettingView.swift */; };
 		EFD5172D281268B300816674 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD5172C281268B300816674 /* Login.swift */; };
 		EFD5172F28126A0F00816674 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD5172E28126A0F00816674 /* LoginViewModel.swift */; };
+		EFE22F6928143EA100F9AB14 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE22F6828143EA100F9AB14 /* RoomCell.swift */; };
 		EFFE1EF4281256B900BB3FDA /* SotsukenAppNo1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFE1EF3281256B900BB3FDA /* SotsukenAppNo1App.swift */; };
 		EFFE1EF6281256B900BB3FDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFE1EF5281256B900BB3FDA /* ContentView.swift */; };
 		EFFE1EF8281256BA00BB3FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFFE1EF7281256BA00BB3FDA /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		EFD51729281266B900816674 /* InitialSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingView.swift; sourceTree = "<group>"; };
 		EFD5172C281268B300816674 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		EFD5172E28126A0F00816674 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EFE22F6828143EA100F9AB14 /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		EFFE1EF0281256B900BB3FDA /* SotsukenAppNo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SotsukenAppNo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFE1EF3281256B900BB3FDA /* SotsukenAppNo1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SotsukenAppNo1App.swift; sourceTree = "<group>"; };
 		EFFE1EF5281256B900BB3FDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			children = (
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		EFE22F6528143E4800F9AB14 /* RoomListCompornents */ = {
+			isa = PBXGroup;
+			children = (
+				EFE22F6828143EA100F9AB14 /* RoomCell.swift */,
+			);
+			path = RoomListCompornents;
 			sourceTree = "<group>";
 		};
 		EFFE1EE7281256B900BB3FDA = {
@@ -190,6 +200,7 @@
 				EFFE1F2228125E6200BB3FDA /* SignupView.swift */,
 				EFD51729281266B900816674 /* InitialSettingView.swift */,
 				EFCE944B2812A82800054546 /* RoomListView.swift */,
+				EFE22F6528143E4800F9AB14 /* RoomListCompornents */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +366,7 @@
 				EFD5172D281268B300816674 /* Login.swift in Sources */,
 				EFFE1EF6281256B900BB3FDA /* ContentView.swift in Sources */,
 				EFFE1EF4281256B900BB3FDA /* SotsukenAppNo1App.swift in Sources */,
+				EFE22F6928143EA100F9AB14 /* RoomCell.swift in Sources */,
 				EFD5172F28126A0F00816674 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
