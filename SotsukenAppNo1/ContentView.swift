@@ -9,15 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var login: Login
+    @EnvironmentObject var user: User
 
     var body: some View {
         if self.login.isLogin == true {
-            RoomListView()
-        } else {
-            if self.login.loginSignupFlag == false {
-                LoginView().environmentObject(login)
+            if self.user.hasInfo == false {
+                // ログイン済みで未初期設定
+                InitialSettingView()
             } else {
-                SignupView().environmentObject(login)
+                // ログイン済みで初期設定済み
+                RoomListView()
+            }
+        } else {
+        // 未ログイン(どちらかの画面で進むとログイン済み状態になる)
+            if self.login.loginSignupFlag == false {
+                LoginView()
+                    .environmentObject(login)
+            } else {
+                SignupView()
+                    .environmentObject(login)
             }
         }
     }
@@ -25,7 +35,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(Login())
-        ContentView().environmentObject(Login(isLogin: true))
+        ContentView()
+            .environmentObject(Login())
+            .environmentObject(User())
+        ContentView()
+            .environmentObject(Login(isLogin: true))
+            .environmentObject(User())
     }
 }

@@ -15,6 +15,7 @@ class Login: ObservableObject {
 
     // ログイン済みかどうかを判定するフラグ
     @Published var isLogin: Bool
+
     // ログインorサインアップを切り替えるフラグ
     // false:ログイン true:サインアップ
     @Published var loginSignupFlag = false

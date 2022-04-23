@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF7D8AA02813DE06006F04CC /* InitialSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D8A9F2813DE06006F04CC /* InitialSettingViewModel.swift */; };
+		EF7D8AA22813E02C006F04CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D8AA12813E02C006F04CC /* User.swift */; };
 		EFCE944C2812A82800054546 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE944B2812A82800054546 /* RoomListView.swift */; };
 		EFCE944E2812CF3B00054546 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE944D2812CF3B00054546 /* SignupViewModel.swift */; };
 		EFD5172A281266B900816674 /* InitialSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD51729281266B900816674 /* InitialSettingView.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF7D8A9F2813DE06006F04CC /* InitialSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingViewModel.swift; sourceTree = "<group>"; };
+		EF7D8AA12813E02C006F04CC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EFCE944B2812A82800054546 /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		EFCE944D2812CF3B00054546 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		EFD51729281266B900816674 /* InitialSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingView.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				EFD5172C281268B300816674 /* Login.swift */,
+				EF7D8AA12813E02C006F04CC /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			children = (
 				EFD5172E28126A0F00816674 /* LoginViewModel.swift */,
 				EFCE944D2812CF3B00054546 /* SignupViewModel.swift */,
+				EF7D8A9F2813DE06006F04CC /* InitialSettingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -333,8 +339,10 @@
 			files = (
 				EFCE944E2812CF3B00054546 /* SignupViewModel.swift in Sources */,
 				EFD5172A281266B900816674 /* InitialSettingView.swift in Sources */,
+				EF7D8AA02813DE06006F04CC /* InitialSettingViewModel.swift in Sources */,
 				EFCE944C2812A82800054546 /* RoomListView.swift in Sources */,
 				EFFE1F2328125E6200BB3FDA /* SignupView.swift in Sources */,
+				EF7D8AA22813E02C006F04CC /* User.swift in Sources */,
 				EFFE1F212812572D00BB3FDA /* LoginView.swift in Sources */,
 				EFD5172D281268B300816674 /* Login.swift in Sources */,
 				EFFE1EF6281256B900BB3FDA /* ContentView.swift in Sources */,

@@ -14,86 +14,119 @@ struct SignupView: View {
     var body: some View {
         let width = UIScreen.main.bounds.width
 
-        VStack {
-            HStack {
-                Spacer()
-                Text("Sign Up")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .italic()
-                Spacer()
-                Spacer()
-                Spacer()
-            }.padding(.vertical, 40.0)
+        // 画面全体の縦方向
+        VStack(spacing: 0) {
 
-            Image("SharkFin")
-                .resizable()
-                .scaledToFit()
-                .frame(width: width/4)
-                .padding(.bottom, 60)
+            // タイトルとサメイラスト
+            VStack(spacing: 0) {
+                // タイトル＜Sign Up＞
+                HStack {
+                    Text("Sign Up")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .italic()
+                        .padding(.leading, width*0.1)
 
-            TextField(" ✉️Email", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                .frame(width: width*0.9)
-                .cornerRadius(24)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .stroke(.black, lineWidth: 1.0)
-                )
-                .padding(.bottom, 20)
+                    Spacer()
+                }
 
-            SecureField(" 🔒Password", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                .frame(width: width*0.9)
-                .cornerRadius(24)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .stroke(.black, lineWidth: 1.0)
-                )
-                .padding(.bottom, 20)
+                // サメのひれのイラスト
+                Group {
+                    Image("SharkFin")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: width*0.25)
+                        .opacity(0.7)
+                }
+                .frame(height: UIScreen.main.bounds.height*0.2)
+            }
 
-            SecureField(" 🔒Confilm Password", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                .frame(width: width*0.9)
-                .cornerRadius(24)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .stroke(.black, lineWidth: 1.0)
-                )
-                .padding(.bottom, 60)
+            // サメのひれの下 - Emailフィールド
+            Spacer()
+                .frame(height: 80)
 
-            Button(action: {
-
-            }, label: {
-                Text("Sign Up")
-                    .fontWeight(.semibold)
-                    .frame(width: width*0.8, height: width*0.8*0.14)
-                    .foregroundColor(.black)
-                    .background(.white)
+            // 入力欄
+            VStack(spacing: 0) {
+                // テキストフィールド　＜Email＞
+                TextField(" ✉️Email", text: $signupViewModel.email)
+                    .frame(width: width*0.8, height: 24)
                     .cornerRadius(24)
                     .overlay(
                         RoundedRectangle(cornerRadius: 24)
                             .stroke(.black, lineWidth: 1.0)
                     )
-                    .shadow(color: .black.opacity(0.1), radius: 5, x: 10, y: 10)
-            })
-            .padding(.bottom, 40)
+
+                // Emailフィールド - Passwordフィールド
+                Spacer()
+                    .frame(height: 20)
+
+                // テキストフィールド ＜Password＞
+                SecureField(" 🔒Password", text: $signupViewModel.password)
+                    .frame(width: width*0.8, height: 24)
+                    .cornerRadius(24)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 24)
+                            .stroke(.black, lineWidth: 1.0)
+                    )
+
+                // Passwordフィールド - Confilm Passwordフィールド
+                Spacer()
+                    .frame(height: 20)
+
+                // テキストフィールド ＜Password＞
+                SecureField(" 🔒Confilm Password", text: $signupViewModel.confilmPassword)
+                    .frame(width: width*0.8, height: 24)
+                    .cornerRadius(24)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 24)
+                            .stroke(.black, lineWidth: 1.0)
+                    )
+            }
 
             Spacer()
 
-            Button(action: {
-                signupViewModel.changeLoginAndSignup()
-            }, label: {
-                Text("Log in")
-            })
-            .padding(.bottom, 40)
+            VStack(spacing: 0) {
+                // ボタン ＜Sign Up＞
+                Button(action: {
+                    signupViewModel.onTapSignupButton()
+                }, label: {
+                    Text("Sign Up")
+                        .fontWeight(.semibold)
+                        .frame(width: width*0.8, height: width*0.8*0.14)
+                        .foregroundColor(.black)
+                        .background(.white)
+                        .cornerRadius(24)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 24)
+                                .stroke(.black, lineWidth: 1.0)
+                        )
+                        .shadow(color: .black.opacity(0.1), radius: 5, x: 10, y: 10)
+                })
 
-        }.onAppear() {
+                Spacer()
+                    .frame(height: 60)
+
+                // ボタン ＜Log in＞
+                Button(action: {
+                    signupViewModel.onTapLoginText()
+                }, label: {
+                    Text("Log in")
+                        .font(.system(size: 17))
+                })
+
+                Spacer()
+                    .frame(height: 40)
+            }
+
+        }.onAppear {
+            // ViewModelにLoginを渡す
             signupViewModel.getModels(login: login)
         }
-
     }
 }
 
 struct SignupView_Previews: PreviewProvider {
     static var previews: some View {
-        SignupView()
+        SignupView().environmentObject(Login())
     }
 }

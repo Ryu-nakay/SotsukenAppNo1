@@ -1,5 +1,5 @@
 //
-//  LoginViewModel.swift
+//  SignupViewModel.swift
 //  SotsukenAppNo1
 //
 //  Created by 中山龍 on 2022/04/22.
@@ -7,13 +7,7 @@
 
 import Foundation
 
-/*
- 【LoginViewModel】
- 保有モデル
- ・login
- */
-
-class LoginViewModel: ObservableObject {
+class SignupViewModel: ObservableObject {
     // Model
     @Published var login: Login?
 
@@ -22,17 +16,18 @@ class LoginViewModel: ObservableObject {
         self.login = login
     }
 
-    // Login画面の入力値
+    // Signup画面の入力値
     @Published var email: String = ""
     @Published var password: String = ""
+    @Published var confilmPassword: String = ""
 
-    // Signupテキストボタンの挙動
-    func onTapSignupText() {
-        self.login?.loginSignupFlag = true
+    // Loginテキストボタンの挙動
+    func onTapLoginText() {
+        self.login?.loginSignupFlag = false
     }
 
-    // Loginボタンの挙動
-    func onTapLoginButton() {
+    // Signupボタンの挙動
+    func onTapSignupButton() {
         self.login?.isLogin = true
     }
 }

@@ -11,6 +11,9 @@ import SwiftUI
 struct SotsukenAppNo1App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(Login())        }
+            ContentView()
+            .environmentObject(Login())
+            .environmentObject(User())
+        }
     }
 }

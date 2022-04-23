@@ -14,77 +14,107 @@ struct LoginView: View {
     var body: some View {
         let width = UIScreen.main.bounds.width
 
-        VStack {
-            HStack {
-                Spacer()
-                Text("Log in")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .italic()
-                Spacer()
-                Spacer()
-                Spacer()
-            }.padding(EdgeInsets(
-                top: 40,
-                leading: 0,
-                bottom: 60,
-                trailing: 0
-            ))
+        // 画面全体の縦方向
+        VStack(spacing: 0) {
 
-            Image("Shark")
-                .resizable()
-                .scaledToFit()
-                .frame(width: width/2)
-                .padding(.bottom, 55)
-                .opacity(0.7)
+            // タイトルとサメイラスト
+            VStack(spacing: 0) {
+                // タイトル＜Log in＞
+                HStack {
+                    Text("Log in")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .italic()
+                        .padding(.leading, width*0.1)
 
-            TextField(" ✉️Email", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                .frame(width: width*0.9)
-                .cornerRadius(24)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .stroke(.black, lineWidth: 1.0)
-                )
-                .padding(.bottom, 20)
+                    Spacer()
+                }
 
-            SecureField(" 🔒Password", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                .frame(width: width*0.9)
-                .cornerRadius(24)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .stroke(.black, lineWidth: 1.0)
-                )
-                .padding(.bottom, 60
-                )
+                // サメのイラスト
+                Group {
+                    Image("Shark")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: width*0.5)
+                        .opacity(0.4)
+                }
+                .frame(height: UIScreen.main.bounds.height*0.2)
+            }
 
+            // サメの下 - Emailフィールド
             Spacer()
+                .frame(height: 80)
 
-            Button(action: {
-
-            }, label: {
-                Text("Log in")
-                    .fontWeight(.semibold)
-                    .frame(width: width*0.8, height: width*0.8*0.14)
-                    .foregroundColor(.black)
-                    .background(.white)
+            // 入力欄
+            VStack(spacing: 0) {
+                // テキストフィールド　＜Email＞
+                TextField(" ✉️Email", text: $loginViewModel.email)
+                    .frame(width: width*0.8, height: 24)
                     .cornerRadius(24)
                     .overlay(
                         RoundedRectangle(cornerRadius: 24)
                             .stroke(.black, lineWidth: 1.0)
                     )
-                    .shadow(color: .black.opacity(0.1), radius: 5, x: 10, y: 10)
-                    .padding(.bottom, 40)
-            })
 
+                // Emailフィールド - Passwordフィールド
+                Spacer()
+                    .frame(height: 20)
 
-            Button(action: {
-                loginViewModel.changeLoginAndSignup()
-            }, label: {
-                Text("Sign up")
-            })
-            .padding(.bottom, 40)
+                // テキストフィールド ＜Password＞
+                SecureField(" 🔒Password", text: $loginViewModel.password)
+                    .frame(width: width*0.8, height: 24)
+                    .cornerRadius(24)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 24)
+                            .stroke(.black, lineWidth: 1.0)
+                    )
+
+                // Passwordフィールド下
+                Spacer()
+                    .frame(height: 20)
+
+                // Sign upとの見た目を合わせるための空白
+                Spacer()
+                    .frame(height: 24)
+            }
+
+            Spacer()
+
+            VStack(spacing: 0) {
+                // ボタン ＜Log in＞
+                Button(action: {
+                    loginViewModel.onTapLoginButton()
+                }, label: {
+                    Text("Log in")
+                        .fontWeight(.semibold)
+                        .frame(width: width*0.8, height: width*0.8*0.14)
+                        .foregroundColor(.black)
+                        .background(.white)
+                        .cornerRadius(24)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 24)
+                                .stroke(.black, lineWidth: 1.0)
+                        )
+                        .shadow(color: .black.opacity(0.1), radius: 5, x: 10, y: 10)
+                })
+
+                Spacer()
+                    .frame(height: 60)
+
+                // ボタン ＜Sign up＞
+                Button(action: {
+                    loginViewModel.onTapSignupText()
+                }, label: {
+                    Text("Sign up")
+                        .font(.system(size: 17))
+                })
+
+                Spacer()
+                    .frame(height: 40)
+            }
 
         }.onAppear {
+            // ViewModelにLoginを渡す
             loginViewModel.getModels(login: login)
         }
 

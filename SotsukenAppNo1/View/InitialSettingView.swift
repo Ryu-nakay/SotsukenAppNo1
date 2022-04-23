@@ -8,46 +8,80 @@
 import SwiftUI
 
 struct InitialSettingView: View {
+    @ObservedObject var initialSettingViewModel = InitialSettingViewModel()
+
     var body: some View {
         let width = UIScreen.main.bounds.width
 
-        ZStack {
-            VStack {
+        // 画面全体の縦方向
+        VStack(spacing: 0) {
+
+            // タイトルとサメイラスト
+            VStack(spacing: 0) {
+                // タイトル＜Initial Setting＞
                 HStack {
-                    Spacer()
                     Text("Initial Setting")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .italic()
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                }.padding(.vertical, 40)
+                        .padding(.leading, width*0.1)
 
-                Image("SharkFin")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: width/3)
-                    .padding(.bottom, 60)
+                    Spacer()
+                }
 
-                TextField(" UserName", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                    .frame(width: width*0.9)
+                // サメのひれのイラスト
+                Group {
+                    Image("SharkFin")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: width*0.25)
+                        .opacity(0.6)
+                }
+                .frame(height: UIScreen.main.bounds.height*0.2)
+            }
+
+            // サメのひれの下 - UserNameフィールド
+            Spacer()
+                .frame(height: 80)
+
+            // 入力欄
+            VStack(spacing: 0) {
+                // テキストフィールド　＜User Name＞
+                TextField(" User Name", text: $initialSettingViewModel.userName)
+                    .frame(width: width*0.8, height: 24)
                     .cornerRadius(24)
                     .overlay(
                         RoundedRectangle(cornerRadius: 24)
                             .stroke(.black, lineWidth: 1.0)
                     )
-                    .padding(.bottom, 20)
 
-                TextField(" User Identifier", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                    .frame(width: width*0.9)
+                // UserNameフィールド - User Identifierフィールド
+                Spacer()
+                    .frame(height: 20)
+
+                // テキストフィールド ＜User Identifier＞
+                SecureField(" User Identifier", text: $initialSettingViewModel.userIdentifier)
+                    .frame(width: width*0.8, height: 24)
                     .cornerRadius(24)
                     .overlay(
                         RoundedRectangle(cornerRadius: 24)
                             .stroke(.black, lineWidth: 1.0)
                     )
-                    .padding(.bottom, 60)
 
+                // User Identifierフィールド下
+                Spacer()
+                    .frame(height: 20)
+
+                // Sign upとの見た目を合わせるための空白
+                Spacer()
+                    .frame(height: 24)
+            }
+
+            Spacer()
+
+            // ボタンのグループ
+            VStack(spacing: 0) {
+                // ボタン ＜Save＞
                 Button(action: {
 
                 }, label: {
@@ -65,7 +99,18 @@ struct InitialSettingView: View {
                 })
 
                 Spacer()
+                    .frame(height: 60)
+
+                // Login-Signupボタンの高さをあける
+                Spacer()
+                    .frame(height: 17)
+
+                Spacer()
+                    .frame(height: 40)
             }
+
+        }.onAppear {
+            // ViewModelにLoginを渡す
         }
     }
 }
