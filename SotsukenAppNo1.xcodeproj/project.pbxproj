@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF47405A2814E0E4002633BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4740592814E0E4002633BD /* HomeView.swift */; };
+		EF47405C2814E196002633BD /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF47405B2814E196002633BD /* SettingView.swift */; };
+		EF47405F2814E87C002633BD /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF47405E2814E87C002633BD /* SettingCell.swift */; };
 		EF7D8AA02813DE06006F04CC /* InitialSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D8A9F2813DE06006F04CC /* InitialSettingViewModel.swift */; };
 		EF7D8AA22813E02C006F04CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D8AA12813E02C006F04CC /* User.swift */; };
 		EFCE944C2812A82800054546 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE944B2812A82800054546 /* RoomListView.swift */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF4740592814E0E4002633BD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EF47405B2814E196002633BD /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		EF47405E2814E87C002633BD /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		EF7D8A9F2813DE06006F04CC /* InitialSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingViewModel.swift; sourceTree = "<group>"; };
 		EF7D8AA12813E02C006F04CC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EFCE944B2812A82800054546 /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
@@ -91,18 +97,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EFD517302812787600816674 /* Protocol */ = {
+		EF47405D2814E867002633BD /* SettingViewCompornents */ = {
 			isa = PBXGroup;
 			children = (
+				EF47405E2814E87C002633BD /* SettingCell.swift */,
 			);
-			path = Protocol;
+			path = SettingViewCompornents;
 			sourceTree = "<group>";
 		};
-		EFE22F642814335300F9AB14 /* Class */ = {
+		EF4740602814EB2C002633BD /* HomeViewGroup */ = {
 			isa = PBXGroup;
 			children = (
+				EF4740592814E0E4002633BD /* HomeView.swift */,
+				EF4740632814ED5A002633BD /* SettingView */,
+				EF4740622814ECFD002633BD /* RoomListView */,
 			);
-			path = Class;
+			path = HomeViewGroup;
+			sourceTree = "<group>";
+		};
+		EF4740612814ECD5002633BD /* LoginViewGroup */ = {
+			isa = PBXGroup;
+			children = (
+				EFFE1F202812572D00BB3FDA /* LoginView.swift */,
+				EFFE1F2228125E6200BB3FDA /* SignupView.swift */,
+				EFD51729281266B900816674 /* InitialSettingView.swift */,
+			);
+			path = LoginViewGroup;
+			sourceTree = "<group>";
+		};
+		EF4740622814ECFD002633BD /* RoomListView */ = {
+			isa = PBXGroup;
+			children = (
+				EFCE944B2812A82800054546 /* RoomListView.swift */,
+				EFE22F6528143E4800F9AB14 /* RoomListCompornents */,
+			);
+			path = RoomListView;
+			sourceTree = "<group>";
+		};
+		EF4740632814ED5A002633BD /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				EF47405B2814E196002633BD /* SettingView.swift */,
+				EF47405D2814E867002633BD /* SettingViewCompornents */,
+			);
+			path = SettingView;
 			sourceTree = "<group>";
 		};
 		EFE22F6528143E4800F9AB14 /* RoomListCompornents */ = {
@@ -136,8 +174,6 @@
 		EFFE1EF2281256B900BB3FDA /* SotsukenAppNo1 */ = {
 			isa = PBXGroup;
 			children = (
-				EFE22F642814335300F9AB14 /* Class */,
-				EFD517302812787600816674 /* Protocol */,
 				EFFE1F1F2812571A00BB3FDA /* View */,
 				EFFE1F1E2812571200BB3FDA /* ViewModel */,
 				EFFE1F1D2812570200BB3FDA /* Model */,
@@ -196,11 +232,8 @@
 		EFFE1F1F2812571A00BB3FDA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EFFE1F202812572D00BB3FDA /* LoginView.swift */,
-				EFFE1F2228125E6200BB3FDA /* SignupView.swift */,
-				EFD51729281266B900816674 /* InitialSettingView.swift */,
-				EFCE944B2812A82800054546 /* RoomListView.swift */,
-				EFE22F6528143E4800F9AB14 /* RoomListCompornents */,
+				EF4740612814ECD5002633BD /* LoginViewGroup */,
+				EF4740602814EB2C002633BD /* HomeViewGroup */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,10 +391,13 @@
 			files = (
 				EFCE944E2812CF3B00054546 /* SignupViewModel.swift in Sources */,
 				EFD5172A281266B900816674 /* InitialSettingView.swift in Sources */,
+				EF47405A2814E0E4002633BD /* HomeView.swift in Sources */,
+				EF47405C2814E196002633BD /* SettingView.swift in Sources */,
 				EF7D8AA02813DE06006F04CC /* InitialSettingViewModel.swift in Sources */,
 				EFCE944C2812A82800054546 /* RoomListView.swift in Sources */,
 				EFFE1F2328125E6200BB3FDA /* SignupView.swift in Sources */,
 				EF7D8AA22813E02C006F04CC /* User.swift in Sources */,
+				EF47405F2814E87C002633BD /* SettingCell.swift in Sources */,
 				EFFE1F212812572D00BB3FDA /* LoginView.swift in Sources */,
 				EFD5172D281268B300816674 /* Login.swift in Sources */,
 				EFFE1EF6281256B900BB3FDA /* ContentView.swift in Sources */,

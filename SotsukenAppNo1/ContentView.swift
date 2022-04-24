@@ -17,13 +17,9 @@ struct ContentView: View {
                 // ログイン済みで未初期設定
                 InitialSettingView()
                     .environmentObject(user)
-                    .onAppear {
-                        print(login.isLogin)
-                        print(user.hasInfo)
-                    }
             } else {
                 // ログイン済みで初期設定済み
-                RoomListView()
+                HomeView()
             }
         } else {
         // 未ログイン(どちらかの画面で進むとログイン済み状態になる)

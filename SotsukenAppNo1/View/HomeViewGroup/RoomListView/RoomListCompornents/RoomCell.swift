@@ -11,7 +11,7 @@ struct RoomCell: View {
     var roonName: String
 
     var body: some View {
-        var width = UIScreen.main.bounds.width
+        let width = UIScreen.main.bounds.width
 
         HStack(alignment: .center, spacing: 0) {
             ZStack {
@@ -35,6 +35,7 @@ struct RoomCell: View {
 
         }
         .frame(width: width, height: 46)
+        .background(.white)
         .border(.black.opacity(0.4), width: 0.5)
     }
 }

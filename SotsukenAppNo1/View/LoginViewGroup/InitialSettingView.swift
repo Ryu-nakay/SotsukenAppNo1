@@ -32,7 +32,7 @@ struct InitialSettingView: View {
 
                 // サメのひれのイラスト
                 Group {
-                    Image("SharkFin")
+                    Image(systemName: "person.circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: width*0.25)
