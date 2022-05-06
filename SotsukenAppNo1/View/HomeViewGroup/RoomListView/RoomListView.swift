@@ -20,6 +20,8 @@ struct RoomListView: View {
                             RoomCell(roonName: "Room Name")
                         }
                         Spacer()
+
+                        
                     }
                 }
             }
