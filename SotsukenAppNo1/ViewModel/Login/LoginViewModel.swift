@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 /*
  【LoginViewModel】
@@ -22,13 +23,23 @@ class LoginViewModel: ObservableObject {
         self.login = login
     }
 
+    @Published var imageScale = 0.1
+    @Published var imagePosition = 0.0
+
+    func imageAnimation(width: Double) {
+        withAnimation(.easeInOut(duration: 1)) {
+            imagePosition = (width/2)-(width*0.5)/2
+            imageScale = 1.0
+        }
+    }
+
     // Login画面の入力値
     @Published var email: String = ""
     @Published var password: String = ""
 
     // Signupテキストボタンの挙動
     func onTapSignupText() {
-        self.login?.loginSignupFlag = true
+        self.login?.signupFlag = true
     }
 
     // Loginボタンの挙動

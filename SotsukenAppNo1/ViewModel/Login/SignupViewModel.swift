@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class SignupViewModel: ObservableObject {
     // Model
@@ -16,6 +17,14 @@ class SignupViewModel: ObservableObject {
         self.login = login
     }
 
+    @Published var imagePosition: Double = 0
+
+     func imageAnimation(width: Double) {
+         withAnimation(.linear(duration: 0.6)) {
+             imagePosition = (width/2)-(width*0.25)/2
+         }
+    }
+
     // Signup画面の入力値
     @Published var email: String = ""
     @Published var password: String = ""
@@ -23,7 +32,7 @@ class SignupViewModel: ObservableObject {
 
     // Loginテキストボタンの挙動
     func onTapLoginText() {
-        self.login?.loginSignupFlag = false
+        self.login?.signupFlag = false
     }
 
     // Signupボタンの挙動

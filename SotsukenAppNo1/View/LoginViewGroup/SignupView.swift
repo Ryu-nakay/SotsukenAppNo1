@@ -31,14 +31,21 @@ struct SignupView: View {
                 }
 
                 // サメのひれのイラスト
-                Group {
-                    Image("SharkFin")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: width*0.25)
-                        .opacity(0.7)
+                HStack {
+                    Spacer()
+
+                    Group {
+                        Image("SharkFin")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: width*0.25)
+                            .opacity(0.7)
+                    }
+                    .frame(height: UIScreen.main.bounds.height*0.2)
+
+                    Spacer()
+                        .frame(width: viewModel.imagePosition)
                 }
-                .frame(height: UIScreen.main.bounds.height*0.2)
             }
 
             // サメのひれの下 - Emailフィールド
@@ -132,6 +139,7 @@ struct SignupView: View {
         }.onAppear {
             // ViewModelにLoginを渡す
             viewModel.getModels(login: login)
+            viewModel.imageAnimation(width: width)
         }
     }
 }

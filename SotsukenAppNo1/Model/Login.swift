@@ -19,5 +19,5 @@ class Login: ObservableObject {
 
     // ログイン画面orサインアップ画面を切り替えるフラグ
     // false:ログイン true:サインアップ
-    @Published var loginSignupFlag = false
+    @Published var signupFlag = false
 }

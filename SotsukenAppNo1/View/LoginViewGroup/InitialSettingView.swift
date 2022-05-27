@@ -30,13 +30,20 @@ struct InitialSettingView: View {
                     Spacer()
                 }
 
-                // サメのひれのイラスト
+                // 人のイラスト
                 Group {
                     Image(systemName: "person.circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: width*0.25)
                         .opacity(0.6)
+                        .rotation3DEffect(Angle(degrees: viewModel.imageDegrees), axis: (x: CGFloat(0), y: CGFloat(0.5), z: CGFloat(0)),perspective: 0)
+                        .onAppear {
+                            viewModel.imageAnimation()
+                        }
+                        .onTapGesture {
+                            viewModel.imageAnimation()
+                        }
                 }
                 .frame(height: UIScreen.main.bounds.height*0.2)
             }

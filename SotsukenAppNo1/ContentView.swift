@@ -16,19 +16,16 @@ struct ContentView: View {
             if self.user.hasInfo == false {
                 // ログイン済みで未初期設定
                 InitialSettingView()
-                    .environmentObject(user)
             } else {
                 // ログイン済みで初期設定済み
                 HomeView()
             }
         } else {
         // 未ログイン(どちらかの画面で進むとログイン済み状態になる)
-            if self.login.loginSignupFlag == false {
+            if self.login.signupFlag == false {
                 LoginView()
-                    .environmentObject(login)
             } else {
                 SignupView()
-                    .environmentObject(login)
             }
         }
     }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class InitialSettingViewModel: ObservableObject {
     // Model
@@ -24,5 +25,15 @@ class InitialSettingViewModel: ObservableObject {
     func onTapSave() {
         // 仮の処理
         self.user?.hasInfo = true
+    }
+
+    // 画像の角度
+    @Published var imageDegrees: Double = 0.0
+    // 画像のアニメーション
+    func imageAnimation() {
+        self.imageDegrees = 0
+        withAnimation(.easeInOut(duration: 1)) {
+            self.imageDegrees = 360*4
+        }
     }
 }

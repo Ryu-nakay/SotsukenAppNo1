@@ -12,6 +12,9 @@
 		EF47405F2814E87C002633BD /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF47405E2814E87C002633BD /* SettingCell.swift */; };
 		EF7D8AA02813DE06006F04CC /* InitialSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D8A9F2813DE06006F04CC /* InitialSettingViewModel.swift */; };
 		EF7D8AA22813E02C006F04CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D8AA12813E02C006F04CC /* User.swift */; };
+		EF9097CF284066A3006FC2B1 /* LoginTitleAndImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9097CE284066A3006FC2B1 /* LoginTitleAndImage.swift */; };
+		EF9097D128406984006FC2B1 /* LoginInputFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9097D028406984006FC2B1 /* LoginInputFields.swift */; };
+		EF9097D328406A72006FC2B1 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9097D228406A72006FC2B1 /* LoginButton.swift */; };
 		EFCE944C2812A82800054546 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE944B2812A82800054546 /* RoomListView.swift */; };
 		EFCE944E2812CF3B00054546 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE944D2812CF3B00054546 /* SignupViewModel.swift */; };
 		EFD5172A281266B900816674 /* InitialSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD51729281266B900816674 /* InitialSettingView.swift */; };
@@ -52,6 +55,9 @@
 		EF47405E2814E87C002633BD /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		EF7D8A9F2813DE06006F04CC /* InitialSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingViewModel.swift; sourceTree = "<group>"; };
 		EF7D8AA12813E02C006F04CC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EF9097CE284066A3006FC2B1 /* LoginTitleAndImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTitleAndImage.swift; sourceTree = "<group>"; };
+		EF9097D028406984006FC2B1 /* LoginInputFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputFields.swift; sourceTree = "<group>"; };
+		EF9097D228406A72006FC2B1 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		EFCE944B2812A82800054546 /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		EFCE944D2812CF3B00054546 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		EFD51729281266B900816674 /* InitialSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingView.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				EFFE1F202812572D00BB3FDA /* LoginView.swift */,
+				EF9097CB28405F97006FC2B1 /* LoginView */,
 				EFFE1F2228125E6200BB3FDA /* SignupView.swift */,
 				EFD51729281266B900816674 /* InitialSettingView.swift */,
 			);
@@ -141,6 +148,26 @@
 				EF47405D2814E867002633BD /* SettingViewCompornents */,
 			);
 			path = SettingView;
+			sourceTree = "<group>";
+		};
+		EF48DC34283CA7E7005E8D0C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFD5172E28126A0F00816674 /* LoginViewModel.swift */,
+				EFCE944D2812CF3B00054546 /* SignupViewModel.swift */,
+				EF7D8A9F2813DE06006F04CC /* InitialSettingViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EF9097CB28405F97006FC2B1 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				EF9097CE284066A3006FC2B1 /* LoginTitleAndImage.swift */,
+				EF9097D028406984006FC2B1 /* LoginInputFields.swift */,
+				EF9097D228406A72006FC2B1 /* LoginButton.swift */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 		EFE22F6528143E4800F9AB14 /* RoomListCompornents */ = {
@@ -174,11 +201,11 @@
 		EFFE1EF2281256B900BB3FDA /* SotsukenAppNo1 */ = {
 			isa = PBXGroup;
 			children = (
+				EFFE1EF5281256B900BB3FDA /* ContentView.swift */,
 				EFFE1F1F2812571A00BB3FDA /* View */,
 				EFFE1F1E2812571200BB3FDA /* ViewModel */,
 				EFFE1F1D2812570200BB3FDA /* Model */,
 				EFFE1EF3281256B900BB3FDA /* SotsukenAppNo1App.swift */,
-				EFFE1EF5281256B900BB3FDA /* ContentView.swift */,
 				EFFE1EF7281256BA00BB3FDA /* Assets.xcassets */,
 				EFFE1EF9281256BA00BB3FDA /* Preview Content */,
 			);
@@ -222,9 +249,7 @@
 		EFFE1F1E2812571200BB3FDA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				EFD5172E28126A0F00816674 /* LoginViewModel.swift */,
-				EFCE944D2812CF3B00054546 /* SignupViewModel.swift */,
-				EF7D8A9F2813DE06006F04CC /* InitialSettingViewModel.swift */,
+				EF48DC34283CA7E7005E8D0C /* Login */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -390,9 +415,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFCE944E2812CF3B00054546 /* SignupViewModel.swift in Sources */,
+				EF9097D328406A72006FC2B1 /* LoginButton.swift in Sources */,
 				EFD5172A281266B900816674 /* InitialSettingView.swift in Sources */,
 				EF47405A2814E0E4002633BD /* HomeView.swift in Sources */,
+				EF9097D128406984006FC2B1 /* LoginInputFields.swift in Sources */,
 				EF47405C2814E196002633BD /* SettingView.swift in Sources */,
+				EF9097CF284066A3006FC2B1 /* LoginTitleAndImage.swift in Sources */,
 				EF7D8AA02813DE06006F04CC /* InitialSettingViewModel.swift in Sources */,
 				EFCE944C2812A82800054546 /* RoomListView.swift in Sources */,
 				EFFE1F2328125E6200BB3FDA /* SignupView.swift in Sources */,
