@@ -15,6 +15,9 @@
 		EF9097CF284066A3006FC2B1 /* LoginTitleAndImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9097CE284066A3006FC2B1 /* LoginTitleAndImage.swift */; };
 		EF9097D128406984006FC2B1 /* LoginInputFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9097D028406984006FC2B1 /* LoginInputFields.swift */; };
 		EF9097D328406A72006FC2B1 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9097D228406A72006FC2B1 /* LoginButton.swift */; };
+		EF9097D7284073D3006FC2B1 /* SignupTitleAndImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9097D6284073D3006FC2B1 /* SignupTitleAndImage.swift */; };
+		EF9097D92840755F006FC2B1 /* SignUpInputFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9097D82840755F006FC2B1 /* SignUpInputFields.swift */; };
+		EF9097DB284078C4006FC2B1 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9097DA284078C4006FC2B1 /* SignUpButton.swift */; };
 		EFCE944C2812A82800054546 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE944B2812A82800054546 /* RoomListView.swift */; };
 		EFCE944E2812CF3B00054546 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE944D2812CF3B00054546 /* SignupViewModel.swift */; };
 		EFD5172A281266B900816674 /* InitialSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD51729281266B900816674 /* InitialSettingView.swift */; };
@@ -58,6 +61,9 @@
 		EF9097CE284066A3006FC2B1 /* LoginTitleAndImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTitleAndImage.swift; sourceTree = "<group>"; };
 		EF9097D028406984006FC2B1 /* LoginInputFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputFields.swift; sourceTree = "<group>"; };
 		EF9097D228406A72006FC2B1 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		EF9097D6284073D3006FC2B1 /* SignupTitleAndImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTitleAndImage.swift; sourceTree = "<group>"; };
+		EF9097D82840755F006FC2B1 /* SignUpInputFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInputFields.swift; sourceTree = "<group>"; };
+		EF9097DA284078C4006FC2B1 /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
 		EFCE944B2812A82800054546 /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		EFCE944D2812CF3B00054546 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		EFD51729281266B900816674 /* InitialSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingView.swift; sourceTree = "<group>"; };
@@ -127,6 +133,7 @@
 				EFFE1F202812572D00BB3FDA /* LoginView.swift */,
 				EF9097CB28405F97006FC2B1 /* LoginView */,
 				EFFE1F2228125E6200BB3FDA /* SignupView.swift */,
+				EF9097D528407395006FC2B1 /* SignupView */,
 				EFD51729281266B900816674 /* InitialSettingView.swift */,
 			);
 			path = LoginViewGroup;
@@ -168,6 +175,16 @@
 				EF9097D228406A72006FC2B1 /* LoginButton.swift */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		EF9097D528407395006FC2B1 /* SignupView */ = {
+			isa = PBXGroup;
+			children = (
+				EF9097D6284073D3006FC2B1 /* SignupTitleAndImage.swift */,
+				EF9097D82840755F006FC2B1 /* SignUpInputFields.swift */,
+				EF9097DA284078C4006FC2B1 /* SignUpButton.swift */,
+			);
+			path = SignupView;
 			sourceTree = "<group>";
 		};
 		EFE22F6528143E4800F9AB14 /* RoomListCompornents */ = {
@@ -421,9 +438,11 @@
 				EF9097D128406984006FC2B1 /* LoginInputFields.swift in Sources */,
 				EF47405C2814E196002633BD /* SettingView.swift in Sources */,
 				EF9097CF284066A3006FC2B1 /* LoginTitleAndImage.swift in Sources */,
+				EF9097D7284073D3006FC2B1 /* SignupTitleAndImage.swift in Sources */,
 				EF7D8AA02813DE06006F04CC /* InitialSettingViewModel.swift in Sources */,
 				EFCE944C2812A82800054546 /* RoomListView.swift in Sources */,
 				EFFE1F2328125E6200BB3FDA /* SignupView.swift in Sources */,
+				EF9097D92840755F006FC2B1 /* SignUpInputFields.swift in Sources */,
 				EF7D8AA22813E02C006F04CC /* User.swift in Sources */,
 				EF47405F2814E87C002633BD /* SettingCell.swift in Sources */,
 				EFFE1F212812572D00BB3FDA /* LoginView.swift in Sources */,
@@ -432,6 +451,7 @@
 				EFFE1EF4281256B900BB3FDA /* SotsukenAppNo1App.swift in Sources */,
 				EFE22F6928143EA100F9AB14 /* RoomCell.swift in Sources */,
 				EFD5172F28126A0F00816674 /* LoginViewModel.swift in Sources */,
+				EF9097DB284078C4006FC2B1 /* SignUpButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
