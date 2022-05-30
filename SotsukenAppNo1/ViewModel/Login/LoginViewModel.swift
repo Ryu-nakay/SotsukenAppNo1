@@ -15,6 +15,8 @@ import SwiftUI
  */
 
 class LoginViewModel: ObservableObject {
+// ===== Model取得関係 =====
+
     // Model
     @Published var login: Login?
 
@@ -23,9 +25,15 @@ class LoginViewModel: ObservableObject {
         self.login = login
     }
 
+
+// ===== アニメーション関係 =====
+
+    // 画像の大きさ
     @Published var imageScale = 0.1
+    // 画像の位置(Spacer()の幅を変化させて画像を押す)
     @Published var imagePosition = 0.0
 
+    // 画面描画時にアニメーションを実施
     func imageAnimation(width: Double) {
         withAnimation(.easeInOut(duration: 1)) {
             imagePosition = (width/2)-(width*0.5)/2
@@ -33,17 +41,23 @@ class LoginViewModel: ObservableObject {
         }
     }
 
+
+// ===== 入力欄の値関係 =====
+
     // Login画面の入力値
     @Published var email: String = ""
     @Published var password: String = ""
 
+
+// ===== ボタンの挙動関係 =====
+    // Loginボタンの挙動
+    func onTapLoginButton() {
+        // ログイン処理
+        self.login?.isLogin = true
+    }
+
     // Signupテキストボタンの挙動
     func onTapSignupText() {
         self.login?.signupFlag = true
-    }
-
-    // Loginボタンの挙動
-    func onTapLoginButton() {
-        self.login?.isLogin = true
     }
 }

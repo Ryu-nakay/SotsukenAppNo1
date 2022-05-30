@@ -25,7 +25,16 @@ struct LoginView: View {
             Spacer()
 
             // ログインボタン
-            LoginButton(viewModel: viewModel, width: width)
+            LoginLoginButton(viewModel: viewModel, width: width)
+
+            Spacer()
+                .frame(height: 60)
+
+            // サインアップ切り替えボタン
+            LoginSwitchSignupButton(viewModel: viewModel)
+
+            Spacer()
+                .frame(height: 40)
         }
         .onAppear {
             // ViewModelにLoginを渡す

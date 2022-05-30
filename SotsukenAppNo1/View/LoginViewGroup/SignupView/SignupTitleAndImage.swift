@@ -17,7 +17,7 @@ struct SignupTitleAndImage: View {
         VStack(spacing: 0) {
             // タイトル＜Sign Up＞
             HStack {
-                Text("Sign Up")
+                Text("Sign up")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .italic()

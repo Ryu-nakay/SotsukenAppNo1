@@ -19,11 +19,19 @@ struct SignupView: View {
 
             SignupTitleAndImage(viewModel: viewModel, width: width)
 
-            SignUpInputFields(viewModel: viewModel, width: width)
+            SignupInputFields(viewModel: viewModel, width: width)
 
             Spacer()
 
-            SignUpButton(viewModel: viewModel, width: width)
+            SignupSignupButton(viewModel: viewModel, width: width)
+
+            Spacer()
+                .frame(height: 60)
+
+            SignupSwitchLoginButton(viewModel: viewModel)
+
+            Spacer()
+                .frame(height: 40)
 
         }.onAppear {
             // ViewModelにLoginを渡す

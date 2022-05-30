@@ -9,11 +9,14 @@ import SwiftUI
 
 @main
 struct SotsukenAppNo1App: App {
+    @StateObject var login = Login()
+    @StateObject var user = User()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
-            .environmentObject(Login())
-            .environmentObject(User())
+                .environmentObject(login)
+                .environmentObject(user)
         }
     }
 }

@@ -59,12 +59,12 @@ struct InitialSettingView: View {
                     Text("User Name")
 
                     TextField("", text: $viewModel.userName)
-                        .frame(width: width*0.8, height: 24)
-                        .cornerRadius(24)
                         .overlay(
-                            RoundedRectangle(cornerRadius: 24)
-                                .stroke(.black, lineWidth: 1.0)
-                    )
+                            RoundedRectangle(cornerRadius: 4)
+                                .stroke(.black, lineWidth: 1)
+                                .padding(.horizontal, -4)
+                        )
+                        .frame(width: width*0.8, height: 22)
                 }
 
                 // UserNameフィールド - User Identifierフィールド のスペース
@@ -75,12 +75,12 @@ struct InitialSettingView: View {
                 VStack(alignment: .leading, spacing: 0) {
                     Text("User Identifier")
                     SecureField("", text: $viewModel.userIdentifier)
-                        .frame(width: width*0.8, height: 24)
-                        .cornerRadius(24)
                         .overlay(
-                            RoundedRectangle(cornerRadius: 24)
-                                .stroke(.black, lineWidth: 1.0)
-                    )
+                            RoundedRectangle(cornerRadius: 4)
+                                .stroke(.black, lineWidth: 1)
+                                .padding(.horizontal, -4)
+                        )
+                        .frame(width: width*0.8, height: 22)
                 }
 
                 // User Identifierフィールド下 のスペース

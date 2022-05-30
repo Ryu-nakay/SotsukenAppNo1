@@ -8,7 +8,7 @@
 import SwiftUI
 
 // SignUpボタン
-struct SignUpButton: View {
+struct SignupSignupButton: View {
     @ObservedObject var viewModel: SignupViewModel
     var width: Double
 
@@ -30,26 +30,12 @@ struct SignUpButton: View {
                     )
                     .shadow(color: .black.opacity(0.1), radius: 5, x: 10, y: 10)
             })
-
-            Spacer()
-                .frame(height: 60)
-
-            // ボタン ＜Log in＞
-            Button(action: {
-                viewModel.onTapLoginText()
-            }, label: {
-                Text("Log in")
-                    .font(.system(size: 17))
-            })
-
-            Spacer()
-                .frame(height: 40)
         }
     }
 }
 
-struct SignUpButton_Previews: PreviewProvider {
+struct SignupSignupButton_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpButton(viewModel: SignupViewModel(), width: 300)
+        SignupSignupButton(viewModel: SignupViewModel(), width: 300)
     }
 }
