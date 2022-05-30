@@ -19,12 +19,12 @@ struct LoginInputFields: View {
 
                 // テキストフィールド　＜Email＞
                 TextField("", text: $viewModel.email)
-                    .frame(width: width*0.8, height: 24)
-                    .cornerRadius(24)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .stroke(.black, lineWidth: 1.0)
+                        RoundedRectangle(cornerRadius: 4)
+                            .stroke(.black, lineWidth: 1)
+                            .padding(.horizontal, -4)
                     )
+                    .frame(width: width*0.8, height: 22)
             }
 
             // Emailフィールド - Passwordフィールド
@@ -36,12 +36,12 @@ struct LoginInputFields: View {
                 Text("Password")
 
                 SecureField("", text: $viewModel.password)
-                    .frame(width: width*0.8, height: 24)
-                    .cornerRadius(24)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 24)
-                            .stroke(.black, lineWidth: 1.0)
-                )
+                        RoundedRectangle(cornerRadius: 4)
+                            .stroke(.black, lineWidth: 1)
+                            .padding(.horizontal, -4)
+                    )
+                    .frame(width: width*0.8, height: 22)
             }
 
             // Passwordフィールド下
