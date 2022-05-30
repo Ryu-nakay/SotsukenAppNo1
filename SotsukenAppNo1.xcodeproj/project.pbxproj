@@ -69,6 +69,7 @@
 		EFD5172C281268B300816674 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		EFD5172E28126A0F00816674 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EFDA3EE82844F2A8006D8622 /* SignUpInputFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpInputFields.swift; path = "../../../../../../.Trash/SotsukenAppNo1 21.38.34/SotsukenAppNo1/View/LoginViewGroup/SignupView/SignUpInputFields.swift"; sourceTree = "<group>"; };
+		EFDA3EEA2844F655006D8622 /* ToDoList.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ToDoList.md; sourceTree = "<group>"; };
 		EFE22F6828143EA100F9AB14 /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		EFFE1EF0281256B900BB3FDA /* SotsukenAppNo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SotsukenAppNo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFE1EF3281256B900BB3FDA /* SotsukenAppNo1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SotsukenAppNo1App.swift; sourceTree = "<group>"; };
@@ -198,6 +199,7 @@
 		EFFE1EE7281256B900BB3FDA = {
 			isa = PBXGroup;
 			children = (
+				EFDA3EEA2844F655006D8622 /* ToDoList.md */,
 				EFFE1EF2281256B900BB3FDA /* SotsukenAppNo1 */,
 				EFFE1F03281256BA00BB3FDA /* SotsukenAppNo1Tests */,
 				EFFE1F0D281256BA00BB3FDA /* SotsukenAppNo1UITests */,
