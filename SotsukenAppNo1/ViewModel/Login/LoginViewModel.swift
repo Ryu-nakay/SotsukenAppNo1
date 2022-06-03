@@ -25,7 +25,6 @@ class LoginViewModel: ObservableObject {
         self.login = login
     }
 
-
 // ===== アニメーション関係 =====
 
     // 画像の大きさ

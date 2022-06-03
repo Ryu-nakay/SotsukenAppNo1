@@ -18,7 +18,6 @@ class SignupViewModel: ObservableObject {
         self.login = login
     }
 
-
 // ===== アニメーション関係 =====
     @Published var imagePosition: Double = 0
 
@@ -28,14 +27,12 @@ class SignupViewModel: ObservableObject {
          }
     }
 
-
 // ===== 入力欄の値関係 =====
     // Signup画面の入力値
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
 
-    
 // ===== ボタンの挙動関係 =====
     // Loginテキストボタンの挙動
     func onTapLoginText() {
