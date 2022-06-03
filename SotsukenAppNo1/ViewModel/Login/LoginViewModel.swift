@@ -52,7 +52,7 @@ class LoginViewModel: ObservableObject {
     // Loginボタンの挙動
     func onTapLoginButton() {
         // ログイン処理
-        self.login?.isLogin = true
+        self.login?.tryToLogin(email: email, password: password)
     }
 
     // Signupテキストボタンの挙動
