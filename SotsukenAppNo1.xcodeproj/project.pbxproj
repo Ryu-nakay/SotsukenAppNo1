@@ -17,6 +17,7 @@
 		EF9097D328406A72006FC2B1 /* LoginLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9097D228406A72006FC2B1 /* LoginLoginButton.swift */; };
 		EF9097D7284073D3006FC2B1 /* SignupTitleAndImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9097D6284073D3006FC2B1 /* SignupTitleAndImage.swift */; };
 		EF9097DB284078C4006FC2B1 /* SignupSignupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9097DA284078C4006FC2B1 /* SignupSignupButton.swift */; };
+		EFCD61652849A11100509C0D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD61642849A11100509C0D /* ActivityIndicator.swift */; };
 		EFCE944C2812A82800054546 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE944B2812A82800054546 /* RoomListView.swift */; };
 		EFCE944E2812CF3B00054546 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE944D2812CF3B00054546 /* SignupViewModel.swift */; };
 		EFD5172A281266B900816674 /* InitialSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD51729281266B900816674 /* InitialSettingView.swift */; };
@@ -67,6 +68,7 @@
 		EF9097D228406A72006FC2B1 /* LoginLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLoginButton.swift; sourceTree = "<group>"; };
 		EF9097D6284073D3006FC2B1 /* SignupTitleAndImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTitleAndImage.swift; sourceTree = "<group>"; };
 		EF9097DA284078C4006FC2B1 /* SignupSignupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSignupButton.swift; sourceTree = "<group>"; };
+		EFCD61642849A11100509C0D /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		EFCE944B2812A82800054546 /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		EFCE944D2812CF3B00054546 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		EFD51729281266B900816674 /* InitialSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingView.swift; sourceTree = "<group>"; };
@@ -199,6 +201,14 @@
 			path = SignupView;
 			sourceTree = "<group>";
 		};
+		EFCD61632849A0DF00509C0D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EFCD61642849A11100509C0D /* ActivityIndicator.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		EFE22F6528143E4800F9AB14 /* RoomListCompornents */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +298,7 @@
 		EFFE1F1F2812571A00BB3FDA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EFCD61632849A0DF00509C0D /* Components */,
 				EF4740612814ECD5002633BD /* LoginViewGroup */,
 				EF4740602814EB2C002633BD /* HomeViewGroup */,
 			);
@@ -458,6 +469,7 @@
 				EFFDD2D628457EED00508757 /* LoginGroupView.swift in Sources */,
 				EF7D8AA02813DE06006F04CC /* InitialSettingViewModel.swift in Sources */,
 				EFCE944C2812A82800054546 /* RoomListView.swift in Sources */,
+				EFCD61652849A11100509C0D /* ActivityIndicator.swift in Sources */,
 				EFFE1F2328125E6200BB3FDA /* SignupView.swift in Sources */,
 				EF7D8AA22813E02C006F04CC /* User.swift in Sources */,
 				EF47405F2814E87C002633BD /* SettingCell.swift in Sources */,

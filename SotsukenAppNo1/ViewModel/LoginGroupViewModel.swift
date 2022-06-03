@@ -19,9 +19,13 @@ class LoginGroupViewModel: ObservableObject {
         self.user!.$hasInfo.assign(to: &self.$hasInfo)
         self.login!.$signupFlag.assign(to: &self.$signupFlag)
 
+        self.login!.$isLoading.assign(to: &self.$isLoading)
+
     }
 
     @Published var isLogin = false
     @Published var hasInfo = false
     @Published var signupFlag = true
+
+    @Published var isLoading = false
 }

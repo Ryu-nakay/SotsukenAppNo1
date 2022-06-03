@@ -31,8 +31,8 @@ class Login: ObservableObject {
     // cancellablesの生成
     private var cancellables = Set<AnyCancellable>()
 
-
     func tryToLogin(email: String, password: String) {
+        self.isLoading = true
         tryToLoginPubliher(email: email, password: password)
             .sink(receiveValue: { result in
                 DispatchQueue.main.async {
@@ -45,7 +45,6 @@ class Login: ObservableObject {
 
     // ログイン機能
     func tryToLoginPubliher(email: String, password: String) -> AnyPublisher<Bool, Never> {
-        self.isLogin = true
 
         var request = URLRequest(url: URL(string: self.loginUrl)!)
         // HTTPメソッド
@@ -68,6 +67,10 @@ class Login: ObservableObject {
         return Future<Bool, Never> { promise in
             // POSTを行う
             URLSession.shared.dataTask(with: request) { (data, response, error) in
+                DispatchQueue.main.async {
+                    self.isLogin = true
+                }
+
                 if error == nil, let data = data, let response = response as? HTTPURLResponse {
                     // HTTPヘッダの取得
                     print("Content-Type: \(response.allHeaderFields["Content-Type"] ?? "")")
