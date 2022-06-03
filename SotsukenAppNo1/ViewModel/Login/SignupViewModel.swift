@@ -41,6 +41,6 @@ class SignupViewModel: ObservableObject {
 
     // Signupボタンの挙動
     func onTapSignupButton() {
-        self.login?.isLogin = true
+        self.login?.tryToSignup(email: email, password: password)
     }
 }

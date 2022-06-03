@@ -12,20 +12,26 @@ struct ContentView: View {
     @EnvironmentObject var user: User
 
     var body: some View {
-        if self.login.isLogin == true {
-            if self.user.hasInfo == false {
-                // ログイン済みで未初期設定
-                InitialSettingView()
+        ZStack {
+            if self.login.isLogin == true {
+                if self.user.hasInfo == false {
+                    // ログイン済みで未初期設定
+                    InitialSettingView()
+                } else {
+                    // ログイン済みで初期設定済み
+                    HomeView()
+                }
             } else {
-                // ログイン済みで初期設定済み
-                HomeView()
+            // 未ログイン(どちらかの画面で進むとログイン済み状態になる)
+                if self.login.signupFlag == false {
+                    LoginView()
+                } else {
+                    SignupView()
+                }
             }
-        } else {
-        // 未ログイン(どちらかの画面で進むとログイン済み状態になる)
-            if self.login.signupFlag == false {
-                LoginView()
-            } else {
-                SignupView()
+
+            if self.login.isLoading {
+                Color.black.opacity(0.6)
             }
         }
     }

@@ -24,8 +24,8 @@
 		EFD5172D281268B300816674 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD5172C281268B300816674 /* Login.swift */; };
 		EFD5172F28126A0F00816674 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD5172E28126A0F00816674 /* LoginViewModel.swift */; };
 		EFDA3EE92844F2A8006D8622 /* SignupInputFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDA3EE82844F2A8006D8622 /* SignupInputFields.swift */; };
+		EFDB57032849C4E70003A782 /* LoginGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDB57022849C4E70003A782 /* LoginGroupView.swift */; };
 		EFE22F6928143EA100F9AB14 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE22F6828143EA100F9AB14 /* RoomCell.swift */; };
-		EFFDD2D628457EED00508757 /* LoginGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDD2D528457EED00508757 /* LoginGroupView.swift */; };
 		EFFDD2D82845803F00508757 /* LoginGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDD2D72845803F00508757 /* LoginGroupViewModel.swift */; };
 		EFFDD2DA284582C900508757 /* LoginSwitchSignupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDD2D9284582C900508757 /* LoginSwitchSignupButton.swift */; };
 		EFFDD2DC2845846F00508757 /* SignupSwitchLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFDD2DB2845846F00508757 /* SignupSwitchLoginButton.swift */; };
@@ -76,8 +76,8 @@
 		EFD5172E28126A0F00816674 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EFDA3EE82844F2A8006D8622 /* SignupInputFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupInputFields.swift; path = "../../../../../../.Trash/SotsukenAppNo1 21.38.34/SotsukenAppNo1/View/LoginViewGroup/SignupView/SignupInputFields.swift"; sourceTree = "<group>"; };
 		EFDA3EEA2844F655006D8622 /* ToDoList.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ToDoList.md; sourceTree = "<group>"; };
+		EFDB57022849C4E70003A782 /* LoginGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGroupView.swift; sourceTree = "<group>"; };
 		EFE22F6828143EA100F9AB14 /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
-		EFFDD2D528457EED00508757 /* LoginGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGroupView.swift; sourceTree = "<group>"; };
 		EFFDD2D72845803F00508757 /* LoginGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGroupViewModel.swift; sourceTree = "<group>"; };
 		EFFDD2D9284582C900508757 /* LoginSwitchSignupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSwitchSignupButton.swift; sourceTree = "<group>"; };
 		EFFDD2DB2845846F00508757 /* SignupSwitchLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSwitchLoginButton.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		EF4740612814ECD5002633BD /* LoginViewGroup */ = {
 			isa = PBXGroup;
 			children = (
-				EFFDD2D528457EED00508757 /* LoginGroupView.swift */,
+				EFDB57022849C4E70003A782 /* LoginGroupView.swift */,
 				EFFE1F202812572D00BB3FDA /* LoginView.swift */,
 				EF9097CB28405F97006FC2B1 /* LoginView */,
 				EFFE1F2228125E6200BB3FDA /* SignupView.swift */,
@@ -466,13 +466,13 @@
 				EF9097CF284066A3006FC2B1 /* LoginTitleAndImage.swift in Sources */,
 				EF9097D7284073D3006FC2B1 /* SignupTitleAndImage.swift in Sources */,
 				EFFDD2DC2845846F00508757 /* SignupSwitchLoginButton.swift in Sources */,
-				EFFDD2D628457EED00508757 /* LoginGroupView.swift in Sources */,
 				EF7D8AA02813DE06006F04CC /* InitialSettingViewModel.swift in Sources */,
 				EFCE944C2812A82800054546 /* RoomListView.swift in Sources */,
 				EFCD61652849A11100509C0D /* ActivityIndicator.swift in Sources */,
 				EFFE1F2328125E6200BB3FDA /* SignupView.swift in Sources */,
 				EF7D8AA22813E02C006F04CC /* User.swift in Sources */,
 				EF47405F2814E87C002633BD /* SettingCell.swift in Sources */,
+				EFDB57032849C4E70003A782 /* LoginGroupView.swift in Sources */,
 				EFFE1F212812572D00BB3FDA /* LoginView.swift in Sources */,
 				EFD5172D281268B300816674 /* Login.swift in Sources */,
 				EFFE1EF6281256B900BB3FDA /* ContentView.swift in Sources */,
